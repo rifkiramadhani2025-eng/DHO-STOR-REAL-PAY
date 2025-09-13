@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway - Graffiti Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 3px solid #ff3366;
+        }
+        
+        .graffiti-title {
+            font-family: 'Permanent Marker', cursive;
+            text-align: center;
+            font-size: 3.5rem;
+            color: #ff3366;
+            text-shadow: 3px 3px 0 #ffcc00, 
+                        6px 6px 0 #00ccff,
+                        0 0 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .payment-card {
+            background: linear-gradient(145deg, #2a2a48, #1e1e36);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid #444;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff3366;
+        }
+        
+        .payment-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .payment-name {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+        
+        .payment-number {
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            font-family: monospace;
+            letter-spacing: 1px;
+            border: 1px dashed #ff3366;
+            word-break: break-all;
+        }
+        
+        .instructions {
+            background: rgba(255, 51, 102, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 5px solid #ff3366;
+        }
+        
+        .instructions h3 {
+            font-family: 'Permanent Marker', cursive;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .highlight {
+            color: #ff3366;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .graffiti-title {
+                font-size: 2.5rem;
+                text-shadow: 2px 2px 0 #ffcc00, 
+                            4px 4px 0 #00ccff;
+            }
+            
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Efek graffiti tambahan */
+        .graffiti-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-family: 'Permanent Marker', cursive;
+            color: #00ccff;
+            transform: rotate(15deg);
+            font-size: 1.2rem;
+        }
+        
+        .spray-effect {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,204,0,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .spray-1 {
+            top: 10%;
+            left: 5%;
+        }
+        
+        .spray-2 {
+            bottom: 10%;
+            right: 5%;
+            background: radial-gradient(circle, rgba(255,51,102,0.3) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body>
+    <div class="spray-effect spray-1"></div>
+    <div class="spray-effect spray-2"></div>
+    
+    <div class="container">
+        <div class="graffiti-tag">#URBANPAY</div>
+        
+        <h1 class="graffiti-title">PAYMENT GATEWAY</h1>
+        
+        <div class="payment-methods">
+            <div class="payment-card">
+                <div class="payment-icon">💳</div>
+                <h2 class="payment-name">DANA</h2>
+                <p class="payment-number">085274182861</p>
+            </div>
+            
+            <div class="payment-card">
+                <div class="payment-icon">📱</div>
+                <h2 class="payment-name">GOPAY</h2>
+                <p class="payment-number">081263689438</p>
+            </div>
+            
+            <div class="payment-card">
+                <div class="payment-icon">📲</div>
+                <h2 class="payment-name">OVO</h2>
+                <p class="payment-number">081263689438</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>INSTRUKSI PEMBAYARAN</h3>
+            <ol>
+                <li>Salin nomor pembayaran yang diinginkan</li>
+                <li>Buka aplikasi pembayaran terkait</li>
+                <li>Tempel nomor pada kolom penerima</li>
+                <li>Masukkan jumlah pembayaran yang sesuai</li>
+                <li>Konfirmasi pembayaran Anda</li>
+                <li>Simpan bukti pembayaran sebagai verifikasi</li>
+            </ol>
+        </div>
+        
+        <div class="footer">
+            <p>Untuk konfirmasi pembayaran, silakan hubungi kami di <span class="highlight">customer@urbanpay.com</span></p>
+            <p>© 2023 UrbanPay Graffiti Payment System</p>
+        </div>
+    </div>
+</body>
+</html>
